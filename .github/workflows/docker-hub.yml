@@ -6,6 +6,7 @@ on:
 
 jobs:
   docker-image:
+    if: ${{ secrets.DOCKERHUB_TOKEN && != null && secrets.DOCKERHUB_TOKEN != '' }}
     runs-on: ubuntu-latest
 
     permissions:
